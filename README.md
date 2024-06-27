@@ -5,12 +5,13 @@ Efficient and general implementation of Generalized Mean Pooling (GeM).
 ![benchmark_result](./assets/benchmark.png)
 <!-- ![benchmark_result](https://raw.githubusercontent.com/Kitsunetic/fast-GeM/master/assets/benchmark.png?token=GHSAT0AAAAAACQVW5PRDT3UYGFC6QHKAWNQZT426SA) -->
 
-The [original implementation](https://amaarora.github.io/posts/2020-08-30-gempool.html#pytorch-implementation) is quite slower due to the `F.avg_pool` functions.
+The [original implementation](https://amaarora.github.io/posts/2020-08-30-gempool.html#pytorch-implementation) is quite slower due to the `F.avg_pool` function and multiple kernel executions.
 
 We provide a new PyTorch implementation that is 4\~20 times faster than the original.
 This implementation is suitable for environments without OpenAI Triton or when the input is a CPU tensor.
 
-Additionally, we offer a Triton-based implementation that is 3\~4 times faster than our new PyTorch implementation and 6\~85 times faster than the original.
+Additionally, we offer a Triton-based implementation.
+We achieved 3\~4 times faster than our new PyTorch implementation and 6\~85 times faster than the original by utilizing kernel-fusion.
 
 Our implementation is easy to use, maintaining a similar interface to the original while supporting flexible input data shapes.
 
