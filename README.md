@@ -2,8 +2,8 @@
 
 Efficient and general implementation of Generalized Mean Pooling (GeM).
 
-<!-- ![benchmark_result](./assets/benchmark.png) -->
-![benchmark_result](https://raw.githubusercontent.com/Kitsunetic/fast-GeM/master/assets/benchmark.png?token=GHSAT0AAAAAACQVW5PRDT3UYGFC6QHKAWNQZT426SA)
+![benchmark_result](./assets/benchmark.png)
+<!-- ![benchmark_result](https://raw.githubusercontent.com/Kitsunetic/fast-GeM/master/assets/benchmark.png?token=GHSAT0AAAAAACQVW5PRDT3UYGFC6QHKAWNQZT426SA) -->
 
 The [original implementation](https://amaarora.github.io/posts/2020-08-30-gempool.html#pytorch-implementation) is quite slower due to the `F.avg_pool` functions.
 
