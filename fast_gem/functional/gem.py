@@ -21,6 +21,11 @@ def gem(x: Tensor, p: Union[float, Tensor] = 3.0, eps: float = 1e-6, dim: int = 
         assert _triton_available
         from .gem_triton import GeMOps
 
+        if not x.is_contiguous():
+            x = x.contiguous()
+        if not p.is_contiguous():
+            p = p.contiguous()
+
         return GeMOps.apply(x, p, eps, dim, keepdim)
     except:
         _triton_available = False
