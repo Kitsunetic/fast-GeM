@@ -5,7 +5,7 @@ with open("README.md", encoding="utf-8") as f:
 
 setup(
     name="fast_gem",
-    version="0.0.4",
+    version="0.0.5",
     description="Efficient and general implementation of Generalized Mean Pooling (GeM)",
     author="Kitsunetic",
     author_email="jh.shim.gg@gmail.com",
